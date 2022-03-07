@@ -40,7 +40,7 @@
 }
 
 body {
-  font-family: "Archivo", sans-serif;
+  font-family: 'Archivo', sans-serif;
   margin: 0;
   cursor: default;
 }
@@ -102,11 +102,19 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
   background-color: var(--color-pink);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -146,8 +154,9 @@ p {
 
 /* Home */
 #home {
-  background: url("imgs/home-background.png") center/cover no-repeat;
+  background: url('imgs/home-background.png') center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -411,7 +420,7 @@ p {
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
