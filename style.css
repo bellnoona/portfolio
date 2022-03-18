@@ -63,6 +63,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0;
 }
 
 /* Typography */
@@ -118,13 +119,13 @@ p {
   padding: 8px;
 }
 
-.navbar__menu {
-  display: flex;
-}
-
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu {
+  display: flex;
 }
 
 .navbar__menu__item {
@@ -185,6 +186,7 @@ p {
   padding: 50px;
   text-align: center;
   margin: auto;
+  padding-top: 65px;
 }
 
 .section__container {
@@ -232,16 +234,17 @@ p {
 .about__academy,
 .about__school {
   display: flex;
-  align-items: center;
-  margin: auto;
+  padding: 2px 0;
 }
 
 .job__description,
 .academy__description,
 .school__description {
+  display: flex;
+  position: relative;
   margin: 0 16px;
   text-align: left;
-  display: flex;
+  width: 100%;
 }
 
 .job__name,
@@ -250,6 +253,7 @@ p {
 .academy__period,
 .school_name,
 .school_period {
+  top: 0;
   color: var(--color-light-grey);
   padding: 0 10px;
 }
@@ -257,12 +261,16 @@ p {
 .job__name,
 .academy__name,
 .school_name {
+  position: absolute;
+  left: 15%;
   font-size: var(--font-small);
 }
 
 .job__period,
 .academy__period,
 .school_period {
+  position: absolute;
+  left: 1%;
   font-size: var(--font-micro);
 }
 
@@ -341,6 +349,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -363,11 +372,12 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: var(--animation-duration) ease-in;
+  transform: translateY(25%);
 }
 
 .work__projects {
@@ -534,8 +544,20 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 24px;
+    right: 20px;
+    font-size: var(--font-medium);
   }
 
   #navbar {
@@ -559,24 +581,96 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 55px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
+  }
+
+  .about__job,
+  .about__academy,
+  .about__school {
+    margin: 4px 0;
+    padding: 6px 0;
+  }
+
+  .job__description,
+  .academy__description,
+  .school__description {
+    margin: 0;
+  }
+
+  .job__logo,
+  .academy__logo,
+  .school_logo {
+    font-size: 22px;
+  }
+
+  .job__period,
+  .academy__period,
+  .school_period {
+    padding: 0;
+    left: 0;
+  }
+
+  .academy__name,
+  .school_name,
+  .job__name {
+    left: 40%;
   }
 
   .skillset {
     flex-direction: column;
   }
 
+  .work__categories {
+    margin: 30px;
+  }
+
+  .category__btn {
+    margin: 3px 0;
+    width: 100%;
+  }
+
   .project {
     flex-grow: 1;
   }
 
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .testimonial__avatar {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__speech-bubble {
+    order: 1;
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }
