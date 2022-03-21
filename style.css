@@ -234,7 +234,6 @@ p {
 .about__academy,
 .about__school {
   display: flex;
-  padding: 2px 0;
 }
 
 .job__description,
@@ -242,7 +241,6 @@ p {
 .school__description {
   display: flex;
   position: relative;
-  margin: 0 16px;
   text-align: left;
   width: 100%;
 }
