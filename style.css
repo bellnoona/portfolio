@@ -234,6 +234,7 @@ p {
 .about__academy,
 .about__school {
   display: flex;
+  padding: 2px 0;
 }
 
 .job__description,
@@ -241,6 +242,7 @@ p {
 .school__description {
   display: flex;
   position: relative;
+  margin: 0 16px;
   text-align: left;
   width: 100%;
 }
@@ -253,7 +255,6 @@ p {
 .school_period {
   top: 0;
   color: var(--color-light-grey);
-  padding: 0 10px;
 }
 
 .job__name,
@@ -277,7 +278,7 @@ p {
 .school_logo {
   color: var(--color-dark-grey);
   font-size: 26px;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 /* Skill */
