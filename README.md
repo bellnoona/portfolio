@@ -1,5 +1,6 @@
 # Portfolio Website
 🍒 Soohyeon's portfolio    
+- 클릭 시 해당 포트폴리오 사이트를 볼 수 있습니다. ▶️ https://bellnoona.github.io/portfolio/
 - 수정사항 `예정`
   - nav bar : 버튼 수정
   - skills : 기술스택, 반응형 수정
